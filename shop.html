@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop CURA skincare for face, body, and hair.">
+  <title>Shop CURA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./store.css">
+</head>
+<body>
+  <div class="announcement">Complimentary shipping on orders over $75</div>
+  <header class="store-header">
+    <button class="mobile-menu-button text-button" id="mobileMenuButton" aria-expanded="false">Menu</button>
+    <nav class="store-nav" aria-label="Primary">
+      <a href="./shop.html">Shop</a><a href="./index.html#philosophy">About</a><a href="./index.html#journal">Journal</a>
+    </nav>
+    <a class="wordmark" href="./index.html" aria-label="CURA home">CURA</a>
+    <nav class="store-nav utility" aria-label="Utility">
+      <button class="text-button" id="searchButton">Search</button><a href="#account">Account</a><button class="text-button" data-open-cart>Cart (<span data-cart-count>0</span>)</button>
+    </nav>
+    <button class="mobile-cart-button text-button" data-open-cart>Cart (<span data-cart-count>0</span>)</button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-top"><span class="wordmark">CURA</span><button class="text-button" id="mobileMenuClose">Close</button></div>
+    <nav><a href="./shop.html">Shop</a><a href="./index.html#philosophy">About</a><a href="./index.html#journal">Journal</a></nav>
+    <p>Considered formulas for skin, wellbeing, and the world around you.</p>
+  </div>
+
+  <main class="store-shell">
+    <section class="shop-title-row" aria-labelledby="shopTitle">
+      <h1 id="shopTitle">SHOP</h1>
+      <div class="family-tabs" role="tablist" aria-label="Product category">
+        <button class="family-tab active" data-family="Face">Face</button>
+        <button class="family-tab" data-family="Body">Body</button>
+        <button class="family-tab" data-family="Hair">Hair</button>
+      </div>
+      <label class="sort-wrap">Sort by:
+        <select id="sortSelect"><option value="featured">Featured</option><option value="price-asc">Price: Low to high</option><option value="price-desc">Price: High to low</option><option value="name">Name</option></select>
+      </label>
+    </section>
+
+    <section class="filter-bar" aria-label="Product filters">
+      <div class="search-wrap" id="searchWrap"><input id="productSearch" type="search" placeholder="Filter products" aria-label="Search products"></div>
+      <select class="filter-select" id="concernFilter" aria-label="Concern"><option value="">Concern</option><option>Dryness</option><option>Dullness</option><option>Sensitivity</option><option>Congestion</option><option>Buildup</option></select>
+      <select class="filter-select" id="ingredientFilter" aria-label="Ingredient"><option value="">Ingredient</option><option>Amino Acids</option><option>Bakuchiol</option><option>Ceramides</option><option>Hyaluronic Acid</option><option>Niacinamide</option></select>
+      <select class="filter-select optional-filter" id="textureFilter" aria-label="Texture"><option value="">Texture</option><option>Cream</option><option>Serum</option><option>Oil</option><option>Gel</option><option>Lotion</option></select>
+      <select class="filter-select optional-filter" id="priceFilter" aria-label="Price"><option value="">Price</option><option value="under-40">Under $40</option><option value="40-60">$40–$60</option><option value="over-60">Over $60</option></select>
+      <span class="product-count" id="productCount"></span>
+    </section>
+
+    <section class="catalog-grid" id="catalogGrid" aria-live="polite"></section>
+    <nav class="pagination" id="pagination" aria-label="Product pages"></nav>
+
+    <section class="editorial-signup">
+      <div class="editorial-image editorial-photo editorial-signup-photo" role="img" aria-label="Water and mineral stone detail"></div>
+      <div class="editorial-copy">
+        <p class="eyebrow">Join our journey</p><h2>Thoughtful care, delivered.</h2>
+        <p>Sign up for early access, exclusive offers, and considered skincare insights.</p>
+        <form class="inline-form" id="shopNewsletter"><input type="email" placeholder="Enter your email" required aria-label="Email address"><button type="submit" aria-label="Subscribe">→</button></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><a class="wordmark" href="./index.html">CURA</a><p>Skincare, rooted in care.</p></div>
+    <div class="footer-links">
+      <div><p class="eyebrow">Explore</p><a href="./shop.html">Shop</a><a href="./index.html#philosophy">About</a><a href="./index.html#journal">Journal</a></div>
+      <div><p class="eyebrow">Support</p><a href="#contact">Contact</a><a href="#shipping">Shipping & returns</a><a href="#faq">FAQ</a></div>
+      <div><p class="eyebrow">Follow</p><a href="#instagram">Instagram</a><a href="#pinterest">Pinterest</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 CURA</span><span>Privacy · Terms</span></div>
+  </footer>
+
+  <aside class="drawer" id="cartDrawer" aria-hidden="true"><div class="drawer-header"><h2>Your cart</h2><button class="text-button" data-close-cart>Close</button></div><div class="cart-items" id="cartItems"></div><div class="empty-cart" id="emptyCart"><p>Your ritual is waiting.</p><button class="text-button" data-close-cart>Continue shopping</button></div><div class="cart-footer" id="cartFooter"><div><span>Subtotal</span><strong id="cartSubtotal">$0</strong></div><p>Shipping calculated at checkout.</p><button class="primary-button">Proceed to checkout</button></div></aside>
+  <div class="scrim" id="scrim"></div><div class="toast" id="toast" role="status"></div>
+  <script type="module" src="./shop.js"></script>
+</body>
+</html>
