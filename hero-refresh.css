@@ -1,0 +1,273 @@
+/* Approved CURA hero — full viewport across desktop, tablet, and mobile */
+.site-header {
+  color: #171717;
+  top: 29px;
+  height: clamp(72px, 9vh, 96px);
+  padding-inline: clamp(24px, 3.2vw, 56px);
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.site-header .wordmark {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  font-size: clamp(28px, 2.4vw, 42px);
+}
+
+.site-header .left-nav {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  gap: clamp(24px, 3.6vw, 58px);
+}
+
+.site-header .right-nav {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.ritual-hero {
+  position: relative;
+  min-height: calc(100vh - 29px);
+  min-height: calc(100svh - 29px);
+  height: calc(100dvh - 29px);
+  overflow: hidden;
+  color: #171717;
+  background:
+    linear-gradient(90deg, rgba(246,240,232,.98) 0%, rgba(246,240,232,.94) 38%, rgba(246,240,232,.18) 64%, rgba(246,240,232,0) 100%),
+    url('https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=2200&q=92') 72% center / cover no-repeat;
+}
+
+.ritual-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(250,247,242,.08), rgba(231,218,201,.12));
+}
+
+.ritual-hero-copy {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: min(48vw, 760px);
+  padding: clamp(110px, 14vh, 160px) 0 clamp(42px, 6vh, 72px) clamp(42px, 8.5vw, 150px);
+}
+
+.ritual-hero .eyebrow {
+  margin: 0 0 clamp(28px, 4vh, 46px);
+  color: #171717;
+  font-size: clamp(9px, .72vw, 12px);
+  letter-spacing: .32em;
+}
+
+.ritual-hero h1 {
+  margin: 0;
+  max-width: 690px;
+  font-size: clamp(58px, 6.65vw, 116px);
+  line-height: .98 !important;
+  letter-spacing: -.06em !important;
+  font-weight: 400 !important;
+}
+
+.ritual-hero-intro {
+  max-width: 470px;
+  margin: clamp(24px, 3.3vh, 42px) 0 clamp(28px, 4vh, 48px);
+  font-size: clamp(16px, 1.3vw, 22px);
+  line-height: 1.55;
+  color: #57524c;
+}
+
+.ritual-hero-cta {
+  min-width: clamp(220px, 17vw, 285px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  padding: 20px 28px;
+  border: 1px solid #171717;
+  background: #171717;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  transition: background .25s ease, color .25s ease;
+}
+
+.ritual-hero-cta:hover,
+.ritual-hero-cta:focus-visible {
+  background: transparent;
+  color: #171717;
+}
+
+.ritual-hero-cta span:last-child {
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.ritual-hero-product {
+  position: absolute;
+  z-index: 2;
+  right: clamp(28px, 4vw, 74px);
+  bottom: clamp(24px, 4vh, 48px);
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid rgba(23,23,23,.15);
+  background: rgba(249,246,241,.84);
+  backdrop-filter: blur(10px);
+  padding: 12px 16px;
+  font-size: 10px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.ritual-hero-product strong {
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .ritual-hero {
+    background-position: 66% center;
+  }
+  .ritual-hero-copy {
+    width: 57vw;
+    padding-left: 6vw;
+  }
+  .site-header .left-nav {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    top: 29px;
+    color: #171717;
+    height: 78px;
+    padding: 0 24px;
+  }
+  .site-header .wordmark {
+    grid-column: 1;
+    justify-self: start;
+    font-size: 30px;
+  }
+  .mobile-menu-button {
+    grid-column: 3;
+    justify-self: end;
+    color: #171717 !important;
+    font-size: 0;
+    width: 34px;
+    height: 24px;
+    position: relative;
+  }
+  .mobile-menu-button::before,
+  .mobile-menu-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 34px;
+    height: 1.5px;
+    background: currentColor;
+  }
+  .mobile-menu-button::before { top: 5px; box-shadow: 0 7px 0 currentColor; }
+  .mobile-menu-button::after { top: 19px; }
+  .mobile-cart-button {
+    display: block;
+    grid-column: 2;
+    justify-self: end;
+    margin-right: 28px;
+    color: #171717 !important;
+  }
+  .ritual-hero {
+    min-height: calc(100vh - 29px);
+    min-height: calc(100svh - 29px);
+    height: calc(100dvh - 29px);
+    background:
+      linear-gradient(180deg, rgba(246,240,232,.99) 0%, rgba(246,240,232,.98) 46%, rgba(246,240,232,.58) 64%, rgba(246,240,232,.08) 100%),
+      url('https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1400&q=92') 58% 78% / cover no-repeat;
+  }
+  .ritual-hero-copy {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    padding: clamp(136px, 18vh, 180px) 26px 36px;
+  }
+  .ritual-hero .eyebrow {
+    margin-bottom: 26px;
+    font-size: 9px;
+  }
+  .ritual-hero h1 {
+    width: min(92vw, 650px);
+    font-size: clamp(54px, 12vw, 88px);
+    line-height: .98 !important;
+  }
+  .ritual-hero-intro {
+    width: min(88vw, 500px);
+    margin: 24px 0 28px;
+    font-size: clamp(16px, 4vw, 20px);
+    line-height: 1.55;
+  }
+  .ritual-hero-cta {
+    min-width: 220px;
+    width: fit-content;
+    padding: 18px 22px;
+  }
+  .ritual-hero-product {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .ritual-hero {
+    background-position: 56% 82%;
+  }
+  .ritual-hero-copy {
+    padding-top: clamp(130px, 17vh, 162px);
+  }
+  .ritual-hero h1 {
+    font-size: clamp(52px, 15vw, 72px);
+    max-width: 94vw;
+  }
+  .ritual-hero-intro {
+    max-width: 86vw;
+    font-size: 17px;
+  }
+}
+
+@media (max-height: 700px) and (min-width: 901px) {
+  .ritual-hero-copy {
+    padding-top: 104px;
+    padding-bottom: 28px;
+  }
+  .ritual-hero h1 {
+    font-size: clamp(54px, 5.8vw, 86px);
+  }
+  .ritual-hero .eyebrow {
+    margin-bottom: 22px;
+  }
+  .ritual-hero-intro {
+    margin: 20px 0 24px;
+  }
+}
+
+@media (max-height: 720px) and (max-width: 900px) {
+  .ritual-hero-copy {
+    padding-top: 112px;
+  }
+  .ritual-hero h1 {
+    font-size: clamp(46px, 11vw, 64px);
+  }
+  .ritual-hero-intro {
+    margin: 16px 0 20px;
+    font-size: 15px;
+  }
+  .ritual-hero-cta {
+    padding: 14px 18px;
+  }
+}
