@@ -7,8 +7,9 @@
     <title>CURA — Skincare, rooted in care.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./inter.css" />
   </head>
   <body>
     <div class="announcement">Complimentary shipping on orders over $75</div>
@@ -16,7 +17,7 @@
     <header class="site-header" id="siteHeader">
       <button class="mobile-menu-button text-button" id="mobileMenuButton" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
       <nav class="desktop-nav left-nav" aria-label="Primary">
-        <a href="#shop">Shop</a>
+        <a href="./shop.html">Shop</a>
         <a href="#philosophy">About</a>
         <a href="#journal">Journal</a>
       </nav>
@@ -35,7 +36,7 @@
         <button class="text-button" id="mobileMenuClose">Close</button>
       </div>
       <nav>
-        <a href="#shop">Shop</a>
+        <a href="./shop.html">Shop</a>
         <a href="#philosophy">About</a>
         <a href="#journal">Journal</a>
         <button class="text-button" id="mobileSearchButton">Search</button>
@@ -50,7 +51,7 @@
           <p class="eyebrow">Considered skincare</p>
           <h1>Skincare,<br />rooted in care.</h1>
           <p class="hero-intro">CURA is a philosophy of care — for your skin, your wellbeing, and the world around you.</p>
-          <a class="underlined-link" href="#shop">Discover CURA</a>
+          <a class="underlined-link" href="./shop.html">Discover CURA</a>
         </div>
         <div class="hero-image" role="img" aria-label="CURA cream cleanser beside natural stone">
           <button class="hero-product-tag" data-open-product="cream-cleanser">Cream Cleanser <span>100 ml · $42</span></button>
@@ -84,21 +85,9 @@
           <h2>Three steps.<br />Nothing excessive.</h2>
         </div>
         <div class="ritual-steps">
-          <article class="ritual-step reveal">
-            <span>01</span>
-            <h3>Cleanse</h3>
-            <p>Remove the day without disturbing the skin’s natural balance.</p>
-          </article>
-          <article class="ritual-step reveal">
-            <span>02</span>
-            <h3>Treat</h3>
-            <p>Target dehydration, dullness, and sensitivity with concentrated care.</p>
-          </article>
-          <article class="ritual-step reveal">
-            <span>03</span>
-            <h3>Protect</h3>
-            <p>Seal in moisture and defend the skin from daily environmental stress.</p>
-          </article>
+          <article class="ritual-step reveal"><span>01</span><h3>Cleanse</h3><p>Remove the day without disturbing the skin’s natural balance.</p></article>
+          <article class="ritual-step reveal"><span>02</span><h3>Treat</h3><p>Target dehydration, dullness, and sensitivity with concentrated care.</p></article>
+          <article class="ritual-step reveal"><span>03</span><h3>Protect</h3><p>Seal in moisture and defend the skin from daily environmental stress.</p></article>
         </div>
       </section>
 
@@ -113,65 +102,26 @@
       </section>
 
       <section class="newsletter section" id="newsletter">
-        <div>
-          <p class="eyebrow">Notes from CURA</p>
-          <h2>Occasional thoughts on skin, ritual, and care.</h2>
-        </div>
-        <form class="newsletter-form" id="newsletterForm">
-          <label class="sr-only" for="email">Email address</label>
-          <input type="email" id="email" placeholder="Email address" required />
-          <button type="submit">Subscribe</button>
-        </form>
+        <div><p class="eyebrow">Notes from CURA</p><h2>Occasional thoughts on skin, ritual, and care.</h2></div>
+        <form class="newsletter-form" id="newsletterForm"><label class="sr-only" for="email">Email address</label><input type="email" id="email" placeholder="Email address" required /><button type="submit">Subscribe</button></form>
         <p class="form-message" id="newsletterMessage" role="status"></p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-brand">
-        <a class="wordmark" href="#top">CURA</a>
-        <p>Skincare, rooted in care.</p>
-      </div>
+      <div class="footer-brand"><a class="wordmark" href="#top">CURA</a><p>Skincare, rooted in care.</p></div>
       <div class="footer-links">
-        <div><p class="eyebrow">Explore</p><a href="#shop">Shop</a><a href="#philosophy">About</a><a href="#journal">Journal</a></div>
+        <div><p class="eyebrow">Explore</p><a href="./shop.html">Shop</a><a href="#philosophy">About</a><a href="#journal">Journal</a></div>
         <div><p class="eyebrow">Support</p><a href="#contact">Contact</a><a href="#shipping">Shipping & returns</a><a href="#faq">FAQ</a></div>
         <div><p class="eyebrow">Follow</p><a href="#instagram">Instagram</a><a href="#pinterest">Pinterest</a></div>
       </div>
       <div class="footer-bottom"><span>© 2026 CURA</span><span>Privacy · Terms</span></div>
     </footer>
 
-    <aside class="drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle">
-      <div class="drawer-header"><h2 id="cartTitle">Your cart</h2><button class="text-button" data-close-cart>Close</button></div>
-      <div class="cart-items" id="cartItems"></div>
-      <div class="empty-cart" id="emptyCart"><p>Your ritual is waiting.</p><button class="underlined-link text-button" data-close-cart>Continue shopping</button></div>
-      <div class="cart-footer" id="cartFooter">
-        <div><span>Subtotal</span><strong id="cartSubtotal">$0</strong></div>
-        <p>Shipping calculated at checkout.</p>
-        <button class="primary-button" id="checkoutButton">Proceed to checkout</button>
-      </div>
-    </aside>
+    <aside class="drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle"><div class="drawer-header"><h2 id="cartTitle">Your cart</h2><button class="text-button" data-close-cart>Close</button></div><div class="cart-items" id="cartItems"></div><div class="empty-cart" id="emptyCart"><p>Your ritual is waiting.</p><button class="underlined-link text-button" data-close-cart>Continue shopping</button></div><div class="cart-footer" id="cartFooter"><div><span>Subtotal</span><strong id="cartSubtotal">$0</strong></div><p>Shipping calculated at checkout.</p><button class="primary-button" id="checkoutButton">Proceed to checkout</button></div></aside>
     <div class="scrim" id="scrim"></div>
-
-    <dialog class="product-modal" id="productModal">
-      <button class="modal-close text-button" id="modalClose">Close</button>
-      <div class="modal-image"><img id="modalImage" alt="" /></div>
-      <div class="modal-copy">
-        <p class="eyebrow" id="modalCategory"></p>
-        <h2 id="modalName"></h2>
-        <p class="modal-size" id="modalSize"></p>
-        <p id="modalDescription"></p>
-        <div class="modal-actions"><strong id="modalPrice"></strong><button class="primary-button" id="modalAdd">Add to cart</button></div>
-      </div>
-    </dialog>
-
-    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
-      <div class="search-top"><span class="wordmark small">CURA</span><button class="text-button" id="searchClose">Close</button></div>
-      <div class="search-inner">
-        <label for="searchInput">What are you looking for?</label>
-        <input id="searchInput" type="search" placeholder="Cleanser, serum, hydration…" autocomplete="off" />
-        <div class="search-results" id="searchResults"></div>
-      </div>
-    </div>
-
+    <dialog class="product-modal" id="productModal"><button class="modal-close text-button" id="modalClose">Close</button><div class="modal-image"><img id="modalImage" alt="" /></div><div class="modal-copy"><p class="eyebrow" id="modalCategory"></p><h2 id="modalName"></h2><p class="modal-size" id="modalSize"></p><p id="modalDescription"></p><div class="modal-actions"><strong id="modalPrice"></strong><button class="primary-button" id="modalAdd">Add to cart</button></div></div></dialog>
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true"><div class="search-top"><span class="wordmark small">CURA</span><button class="text-button" id="searchClose">Close</button></div><div class="search-inner"><label for="searchInput">What are you looking for?</label><input id="searchInput" type="search" placeholder="Cleanser, serum, hydration…" autocomplete="off" /><div class="search-results" id="searchResults"></div></div></div>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script type="module" src="./main.js"></script>
   </body>
