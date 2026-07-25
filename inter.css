@@ -1,0 +1,144 @@
+:root {
+  --serif: "Inter", Arial, sans-serif;
+  --sans: "Inter", Arial, sans-serif;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+/* Brand wordmark: light, widely tracked Inter */
+.wordmark {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: .3em;
+}
+
+/* Editorial display typography */
+.hero h1,
+.shop-title-row h1,
+.product-panel h1,
+.section-heading h2,
+.philosophy h2,
+.ritual h2,
+.journal h2,
+.newsletter h2,
+.editorial-copy h2,
+.related-heading h2,
+.approach-copy h2,
+.modal-copy h2,
+.drawer-header h2,
+.search-inner label,
+.empty-cart p {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: -.045em;
+}
+
+.hero h1 {
+  line-height: .96;
+}
+
+.section-heading h2,
+.philosophy h2,
+.ritual h2,
+.journal h2,
+.newsletter h2,
+.editorial-copy h2,
+.approach-copy h2 {
+  line-height: 1.04;
+}
+
+/* Smaller display moments */
+.ritual-step h3,
+.related-card h3,
+.catalog-info p,
+.footer-brand p,
+.product-price {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.ritual-step h3,
+.related-card h3,
+.catalog-info p,
+.footer-brand p {
+  font-weight: 300;
+  letter-spacing: -.025em;
+}
+
+.product-price {
+  font-weight: 500;
+  letter-spacing: -.02em;
+}
+
+/* Navigation and utility typography */
+.desktop-nav,
+.store-nav,
+.text-button,
+.announcement,
+.eyebrow,
+.family-tab,
+.sort-wrap,
+.filter-select,
+.product-count,
+.product-family,
+.option-label,
+.accordion button,
+.product-title h3,
+.product-title span,
+.catalog-info h2,
+.product-badge,
+.primary-button,
+.footer-bottom {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 500;
+}
+
+/* Body copy remains calm and light */
+body,
+.hero-intro,
+.philosophy-copy p,
+.journal-copy p,
+.editorial-copy p,
+.product-description,
+.approach-copy p,
+.accordion-content,
+.delivery-note,
+.catalog-info p,
+.footer-links,
+.cart-item p {
+  font-weight: 300;
+}
+
+.product-title h3,
+.catalog-info h2 {
+  letter-spacing: .11em;
+}
+
+.primary-button,
+.quick-add,
+.quick-add-circle {
+  font-weight: 500;
+}
+
+.mobile-menu nav a,
+.mobile-menu nav button {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: -.04em;
+}
+
+.footer-brand p {
+  letter-spacing: -.025em;
+}
+
+@media (max-width: 560px) {
+  .wordmark {
+    letter-spacing: .24em;
+  }
+}
