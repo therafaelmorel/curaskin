@@ -11,114 +11,27 @@
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./inter.css" />
     <link rel="stylesheet" href="./hero-refresh.css" />
+    <link rel="stylesheet" href="./hero-fix.css" />
   </head>
   <body>
     <div class="announcement">Complimentary shipping on orders over $75</div>
-
     <header class="site-header" id="siteHeader">
       <button class="mobile-menu-button text-button" id="mobileMenuButton" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
-      <nav class="desktop-nav left-nav" aria-label="Primary">
-        <a href="./shop.html">Shop</a>
-        <a href="#ritual">Rituals</a>
-        <a href="#philosophy">Ingredients</a>
-        <a href="#philosophy">About</a>
-        <a href="#journal">Journal</a>
-      </nav>
+      <nav class="desktop-nav left-nav" aria-label="Primary"><a href="./shop.html">Shop</a><a href="#ritual">Rituals</a><a href="#philosophy">Ingredients</a><a href="#philosophy">About</a><a href="#journal">Journal</a></nav>
       <a class="wordmark" href="#top" aria-label="CURA home">CURA</a>
-      <nav class="desktop-nav right-nav" aria-label="Utility">
-        <button class="text-button" id="searchButton">Search</button>
-        <button class="text-button cart-trigger" data-open-cart>Cart (<span data-cart-count>0</span>)</button>
-      </nav>
+      <nav class="desktop-nav right-nav" aria-label="Utility"><button class="text-button" id="searchButton">Search</button><button class="text-button cart-trigger" data-open-cart>Cart (<span data-cart-count>0</span>)</button></nav>
       <button class="mobile-cart-button text-button cart-trigger" data-open-cart>Cart (<span data-cart-count>0</span>)</button>
     </header>
-
-    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <div class="mobile-menu-top">
-        <span class="wordmark small">CURA</span>
-        <button class="text-button" id="mobileMenuClose">Close</button>
-      </div>
-      <nav>
-        <a href="./shop.html">Shop</a>
-        <a href="#ritual">Rituals</a>
-        <a href="#philosophy">Ingredients</a>
-        <a href="#philosophy">About</a>
-        <a href="#journal">Journal</a>
-        <button class="text-button" id="mobileSearchButton">Search</button>
-      </nav>
-      <p>Considered formulas for skin, wellbeing, and the world around you.</p>
-    </div>
-
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true"><div class="mobile-menu-top"><span class="wordmark small">CURA</span><button class="text-button" id="mobileMenuClose">Close</button></div><nav><a href="./shop.html">Shop</a><a href="#ritual">Rituals</a><a href="#philosophy">Ingredients</a><a href="#philosophy">About</a><a href="#journal">Journal</a><button class="text-button" id="mobileSearchButton">Search</button></nav><p>Considered formulas for skin, wellbeing, and the world around you.</p></div>
     <main id="top">
-      <section class="ritual-hero" aria-labelledby="heroTitle">
-        <div class="ritual-hero-copy">
-          <p class="eyebrow">The CURA ritual</p>
-          <h1 id="heroTitle">A ritual of<br />quiet care.</h1>
-          <p class="ritual-hero-intro">Skincare that slows you down and supports your skin barrier every day.</p>
-          <a class="ritual-hero-cta" href="./shop.html"><span>Shop now</span><span aria-hidden="true">→</span></a>
-        </div>
-        <a class="ritual-hero-product" href="./product.html?id=radiance-serum"><strong>Radiance Serum</strong><span>30 ml · $72</span></a>
-      </section>
-
-      <section class="products-section section" id="shop">
-        <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow">Essentials</p>
-            <h2>The foundation<br />of healthy skin.</h2>
-          </div>
-          <button class="underlined-link text-button" id="viewAllProducts">View all products</button>
-        </div>
-        <div class="product-grid" id="productGrid"></div>
-      </section>
-
-      <section class="philosophy" id="philosophy">
-        <div class="philosophy-image reveal" role="img" aria-label="Close view of hydrated skin"></div>
-        <div class="philosophy-copy reveal">
-          <p class="eyebrow">Our philosophy</p>
-          <h2>Thoughtful by nature.</h2>
-          <p>We believe skincare should be simple, effective, and responsible. That’s why we use high-performance ingredients, sustainably sourced, in considered formulations that support skin longevity and balance.</p>
-          <a class="underlined-link" href="#journal">Learn more</a>
-        </div>
-      </section>
-
-      <section class="ritual section" id="ritual">
-        <div class="ritual-heading reveal">
-          <p class="eyebrow">The daily ritual</p>
-          <h2>Three steps.<br />Nothing excessive.</h2>
-        </div>
-        <div class="ritual-steps">
-          <article class="ritual-step reveal"><span>01</span><h3>Cleanse</h3><p>Remove the day without disturbing the skin’s natural balance.</p></article>
-          <article class="ritual-step reveal"><span>02</span><h3>Treat</h3><p>Target dehydration, dullness, and sensitivity with concentrated care.</p></article>
-          <article class="ritual-step reveal"><span>03</span><h3>Protect</h3><p>Seal in moisture and defend the skin from daily environmental stress.</p></article>
-        </div>
-      </section>
-
-      <section class="journal section" id="journal">
-        <div class="journal-image reveal"></div>
-        <div class="journal-copy reveal">
-          <p class="eyebrow">CURA Journal · No. 01</p>
-          <h2>Care is a practice.</h2>
-          <p>A quiet guide to building a skincare ritual that works with your skin rather than against it.</p>
-          <a class="underlined-link" href="#newsletter">Read the journal</a>
-        </div>
-      </section>
-
-      <section class="newsletter section" id="newsletter">
-        <div><p class="eyebrow">Notes from CURA</p><h2>Occasional thoughts on skin, ritual, and care.</h2></div>
-        <form class="newsletter-form" id="newsletterForm"><label class="sr-only" for="email">Email address</label><input type="email" id="email" placeholder="Email address" required /><button type="submit">Subscribe</button></form>
-        <p class="form-message" id="newsletterMessage" role="status"></p>
-      </section>
+      <section class="ritual-hero" aria-labelledby="heroTitle"><div class="ritual-hero-copy"><p class="eyebrow">The CURA ritual</p><h1 id="heroTitle">A ritual of<br />quiet care.</h1><p class="ritual-hero-intro">Skincare that slows you down and supports your skin barrier every day.</p><a class="ritual-hero-cta" href="./shop.html"><span>Shop now</span><span aria-hidden="true">→</span></a></div><a class="ritual-hero-product" href="./product.html?id=radiance-serum"><strong>Radiance Serum</strong><span>30 ml · $72</span></a></section>
+      <section class="products-section section" id="shop"><div class="section-heading reveal"><div><p class="eyebrow">Essentials</p><h2>The foundation<br />of healthy skin.</h2></div><button class="underlined-link text-button" id="viewAllProducts">View all products</button></div><div class="product-grid" id="productGrid"></div></section>
+      <section class="philosophy" id="philosophy"><div class="philosophy-image reveal" role="img" aria-label="Close view of hydrated skin"></div><div class="philosophy-copy reveal"><p class="eyebrow">Our philosophy</p><h2>Thoughtful by nature.</h2><p>We believe skincare should be simple, effective, and responsible. That’s why we use high-performance ingredients, sustainably sourced, in considered formulations that support skin longevity and balance.</p><a class="underlined-link" href="#journal">Learn more</a></div></section>
+      <section class="ritual section" id="ritual"><div class="ritual-heading reveal"><p class="eyebrow">The daily ritual</p><h2>Three steps.<br />Nothing excessive.</h2></div><div class="ritual-steps"><article class="ritual-step reveal"><span>01</span><h3>Cleanse</h3><p>Remove the day without disturbing the skin’s natural balance.</p></article><article class="ritual-step reveal"><span>02</span><h3>Treat</h3><p>Target dehydration, dullness, and sensitivity with concentrated care.</p></article><article class="ritual-step reveal"><span>03</span><h3>Protect</h3><p>Seal in moisture and defend the skin from daily environmental stress.</p></article></div></section>
+      <section class="journal section" id="journal"><div class="journal-image reveal"></div><div class="journal-copy reveal"><p class="eyebrow">CURA Journal · No. 01</p><h2>Care is a practice.</h2><p>A quiet guide to building a skincare ritual that works with your skin rather than against it.</p><a class="underlined-link" href="#newsletter">Read the journal</a></div></section>
+      <section class="newsletter section" id="newsletter"><div><p class="eyebrow">Notes from CURA</p><h2>Occasional thoughts on skin, ritual, and care.</h2></div><form class="newsletter-form" id="newsletterForm"><label class="sr-only" for="email">Email address</label><input type="email" id="email" placeholder="Email address" required /><button type="submit">Subscribe</button></form><p class="form-message" id="newsletterMessage" role="status"></p></section>
     </main>
-
-    <footer class="site-footer">
-      <div class="footer-brand"><a class="wordmark" href="#top">CURA</a><p>Skincare, rooted in care.</p></div>
-      <div class="footer-links">
-        <div><p class="eyebrow">Explore</p><a href="./shop.html">Shop</a><a href="#philosophy">About</a><a href="#journal">Journal</a></div>
-        <div><p class="eyebrow">Support</p><a href="#contact">Contact</a><a href="#shipping">Shipping & returns</a><a href="#faq">FAQ</a></div>
-        <div><p class="eyebrow">Follow</p><a href="#instagram">Instagram</a><a href="#pinterest">Pinterest</a></div>
-      </div>
-      <div class="footer-bottom"><span>© 2026 CURA</span><span>Privacy · Terms</span></div>
-    </footer>
-
+    <footer class="site-footer"><div class="footer-brand"><a class="wordmark" href="#top">CURA</a><p>Skincare, rooted in care.</p></div><div class="footer-links"><div><p class="eyebrow">Explore</p><a href="./shop.html">Shop</a><a href="#philosophy">About</a><a href="#journal">Journal</a></div><div><p class="eyebrow">Support</p><a href="#contact">Contact</a><a href="#shipping">Shipping & returns</a><a href="#faq">FAQ</a></div><div><p class="eyebrow">Follow</p><a href="#instagram">Instagram</a><a href="#pinterest">Pinterest</a></div></div><div class="footer-bottom"><span>© 2026 CURA</span><span>Privacy · Terms</span></div></footer>
     <aside class="drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle"><div class="drawer-header"><h2 id="cartTitle">Your cart</h2><button class="text-button" data-close-cart>Close</button></div><div class="cart-items" id="cartItems"></div><div class="empty-cart" id="emptyCart"><p>Your ritual is waiting.</p><button class="underlined-link text-button" data-close-cart>Continue shopping</button></div><div class="cart-footer" id="cartFooter"><div><span>Subtotal</span><strong id="cartSubtotal">$0</strong></div><p>Shipping calculated at checkout.</p><button class="primary-button" id="checkoutButton">Proceed to checkout</button></div></aside>
     <div class="scrim" id="scrim"></div>
     <dialog class="product-modal" id="productModal"><button class="modal-close text-button" id="modalClose">Close</button><div class="modal-image"><img id="modalImage" alt="" /></div><div class="modal-copy"><p class="eyebrow" id="modalCategory"></p><h2 id="modalName"></h2><p class="modal-size" id="modalSize"></p><p id="modalDescription"></p><div class="modal-actions"><strong id="modalPrice"></strong><button class="primary-button" id="modalAdd">Add to cart</button></div></div></dialog>
