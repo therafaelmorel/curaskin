@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./inter.css" />
+    <link rel="stylesheet" href="./hero-refresh.css" />
   </head>
   <body>
     <div class="announcement">Complimentary shipping on orders over $75</div>
@@ -18,13 +19,14 @@
       <button class="mobile-menu-button text-button" id="mobileMenuButton" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
       <nav class="desktop-nav left-nav" aria-label="Primary">
         <a href="./shop.html">Shop</a>
+        <a href="#ritual">Rituals</a>
+        <a href="#philosophy">Ingredients</a>
         <a href="#philosophy">About</a>
         <a href="#journal">Journal</a>
       </nav>
       <a class="wordmark" href="#top" aria-label="CURA home">CURA</a>
       <nav class="desktop-nav right-nav" aria-label="Utility">
         <button class="text-button" id="searchButton">Search</button>
-        <a href="#account">Account</a>
         <button class="text-button cart-trigger" data-open-cart>Cart (<span data-cart-count>0</span>)</button>
       </nav>
       <button class="mobile-cart-button text-button cart-trigger" data-open-cart>Cart (<span data-cart-count>0</span>)</button>
@@ -37,25 +39,24 @@
       </div>
       <nav>
         <a href="./shop.html">Shop</a>
+        <a href="#ritual">Rituals</a>
+        <a href="#philosophy">Ingredients</a>
         <a href="#philosophy">About</a>
         <a href="#journal">Journal</a>
         <button class="text-button" id="mobileSearchButton">Search</button>
-        <a href="#account">Account</a>
       </nav>
       <p>Considered formulas for skin, wellbeing, and the world around you.</p>
     </div>
 
     <main id="top">
-      <section class="hero">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Considered skincare</p>
-          <h1>Skincare,<br />rooted in care.</h1>
-          <p class="hero-intro">CURA is a philosophy of care — for your skin, your wellbeing, and the world around you.</p>
-          <a class="underlined-link" href="./shop.html">Discover CURA</a>
+      <section class="ritual-hero" aria-labelledby="heroTitle">
+        <div class="ritual-hero-copy">
+          <p class="eyebrow">The CURA ritual</p>
+          <h1 id="heroTitle">A ritual of<br />quiet care.</h1>
+          <p class="ritual-hero-intro">Skincare that slows you down and supports your skin barrier every day.</p>
+          <a class="ritual-hero-cta" href="./shop.html"><span>Shop now</span><span aria-hidden="true">→</span></a>
         </div>
-        <div class="hero-image" role="img" aria-label="CURA cream cleanser beside natural stone">
-          <button class="hero-product-tag" data-open-product="cream-cleanser">Cream Cleanser <span>100 ml · $42</span></button>
-        </div>
+        <a class="ritual-hero-product" href="./product.html?id=radiance-serum"><strong>Radiance Serum</strong><span>30 ml · $72</span></a>
       </section>
 
       <section class="products-section section" id="shop">
@@ -79,7 +80,7 @@
         </div>
       </section>
 
-      <section class="ritual section">
+      <section class="ritual section" id="ritual">
         <div class="ritual-heading reveal">
           <p class="eyebrow">The daily ritual</p>
           <h2>Three steps.<br />Nothing excessive.</h2>
