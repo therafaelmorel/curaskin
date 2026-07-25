@@ -1,9 +1,18 @@
+const images = {
+  hero: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1800&q=88',
+  cleanser: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=1000&q=86',
+  serum: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1000&q=86',
+  cream: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1000&q=86',
+  spf: 'https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=1000&q=86',
+  skin: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1400&q=86'
+};
+
 const products = [
-  { id:'gentle-cleanser', name:'Gentle Cleanser', price:38, size:'200 ml', category:'Cleanse', image:'./assets/gentle-cleanser.jpg', description:'A low-foam botanical cleanser that removes impurities while preserving the skin’s natural moisture barrier.' },
-  { id:'radiance-serum', name:'Radiance Serum', price:72, size:'30 ml', category:'Treat', image:'./assets/radiance-serum.jpg', description:'A concentrated antioxidant serum that visibly brightens, supports elasticity, and restores an even appearance.' },
-  { id:'soothing-cream', name:'Soothing Cream', price:58, size:'50 ml', category:'Hydrate', image:'./assets/soothing-cream.jpg', description:'A comforting daily moisturizer with ceramides and calming botanicals for soft, balanced, resilient skin.' },
-  { id:'daily-spf', name:'Daily SPF', price:36, size:'50 ml', category:'Protect', image:'./assets/daily-spf.jpg', description:'A lightweight broad-spectrum mineral sunscreen that protects without residue, fragrance, or heaviness.' },
-  { id:'cream-cleanser', name:'Cream Cleanser', price:42, size:'100 ml', category:'Cleanse', image:'./assets/hero-cura.jpg', description:'A cushiony cream cleanser with amino acids and squalane, created for dry, delicate, or sensitized skin.' }
+  { id:'gentle-cleanser', name:'Gentle Cleanser', price:38, size:'200 ml', category:'Cleanse', image:images.cleanser, description:'A low-foam botanical cleanser that removes impurities while preserving the skin’s natural moisture barrier.' },
+  { id:'radiance-serum', name:'Radiance Serum', price:72, size:'30 ml', category:'Treat', image:images.serum, description:'A concentrated antioxidant serum that visibly brightens, supports elasticity, and restores an even appearance.' },
+  { id:'soothing-cream', name:'Soothing Cream', price:58, size:'50 ml', category:'Hydrate', image:images.cream, description:'A comforting daily moisturizer with ceramides and calming botanicals for soft, balanced, resilient skin.' },
+  { id:'daily-spf', name:'Daily SPF', price:36, size:'50 ml', category:'Protect', image:images.spf, description:'A lightweight broad-spectrum mineral sunscreen that protects without residue, fragrance, or heaviness.' },
+  { id:'cream-cleanser', name:'Cream Cleanser', price:42, size:'100 ml', category:'Cleanse', image:images.hero, description:'A cushiony cream cleanser with amino acids and squalane, created for dry, delicate, or sensitized skin.' }
 ];
 
 const productGrid = document.querySelector('#productGrid');
@@ -15,6 +24,10 @@ const scrim = document.querySelector('#scrim');
 const toast = document.querySelector('#toast');
 const cart = new Map();
 let activeProduct = null;
+
+document.querySelector('.hero-image').style.backgroundImage = `url('${images.hero}')`;
+document.querySelector('.journal-image').style.backgroundImage = `url('${images.hero}')`;
+document.querySelector('.philosophy-image').style.backgroundImage = `url('${images.skin}')`;
 
 function money(value){ return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(value); }
 function renderProducts(list = products.slice(0,4)){
